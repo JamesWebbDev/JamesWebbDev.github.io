@@ -9,7 +9,7 @@
 body {
     background-color: rgb(11, 11, 11);
     font-family: Arial, Helvetica, sans-serif;
-
+    min-width: 1250px;
 }
 
 hr {
