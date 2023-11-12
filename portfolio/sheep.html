@@ -15,10 +15,10 @@
         <div class="navbar">
             <div class="navbar-pages">
                 <a class="navbar-button-text" href="index.html">Home</a>
-                <a class="navbar-button-text" href="diner.html">Dungeon Diner</a>
-                <a class="navbar-button-text" href="down.html">GET DOWN</a>
-                <a class="navbar-button-text" href="sheep.html">Move Sheep</a>
-                <a class="navbar-button-text" href="pong.html">Pirate Pong</a>
+                <a class="navbar-button-text hide-text" href="diner.html">Dungeon Diner</a>
+                <a class="navbar-button-text hide-text" href="down.html">GET DOWN</a>
+                <a class="navbar-button-text hide-text" href="sheep.html">Move Sheep</a>
+                <a class="navbar-button-text hide-text" href="pong.html">Pirate Pong</a>
             </div>
             <div class="navbar-spacer">
                 
@@ -40,12 +40,12 @@
     </header>
     
     <main>
-        <div class="container-main">
+        <div class="container-main" style="min-width: 500px">
             <div 
             class="container" 
             style="background-color: rgb(20, 20, 30); height: 600px;">
                 <section 
-                class="flex-row template-header-box"
+                class="flex-row template-header-box hide-text"
                 style="bottom: 60px;">
                     <div 
                     class="dim-max"
@@ -74,8 +74,8 @@
             </div>
             <div class="container" style="background-color: rgb(4, 4, 4); padding-top: 20px; padding-bottom: 20px">
                 <iframe 
-                width="865" 
-                height="500" 
+                width="600" 
+                height="350" 
                 src="https://www.youtube.com/embed/-K9mkBRXW0k?si=teW6UTOtx7dyUBNE" 
                 title="YouTube video player" 
                 frameborder="0" 
@@ -128,13 +128,13 @@
                         <button class="btn-info" style="border-color: rgb(211, 255, 88);"><a class="link-gameplay" href="MoveSheep_Prototype.zip">
                             ZIP FILE
                         </a></button>
-                        <button class="btn-info" style="font-size: 35px; border-color: rgb(211, 255, 88);"><a class="link-gameplay" href="https://play.google.com/store/apps/details?id=com.LastStrawGames.MOVESHEEPAlpha">
+                        <button class="btn-info" style="font-size: min(2vw, 32px); border-color: rgb(211, 255, 88);"><a class="link-gameplay" href="https://play.google.com/store/apps/details?id=com.LastStrawGames.MOVESHEEPAlpha">
                             GOOGLE PLAY PAGE
                         </a></button>
                     </div>
                     <section 
                     class="container-info slideshow" 
-                    style="grid-area: c; width: 900px; border-color: rgb(211, 255, 88);">
+                    style="grid-area: c; border-color: rgb(211, 255, 88);">
                         <div class="slider-wrapper">
                             <div class="slider">
                                 <img id="slide-1" src="pngs/m_sheep/ms_1.jpg" alt="Slideshow Move Sheep image 1"/>
