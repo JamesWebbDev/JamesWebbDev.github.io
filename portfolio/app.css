@@ -26,7 +26,7 @@ hr {
 .navbar {
 
     position: relative;
-    height: 40px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,14 +39,14 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .navbar-links {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
 .navbar-spacer {
@@ -59,9 +59,9 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    margin-left: 15px;
 
-    font-size: 14px;
+    font-size: min(3vw, 16px);
     color: whitesmoke;
     background-color: rgb(22, 22, 22);
     border: 0px;
@@ -214,13 +214,13 @@ hr {
 
 .ele-para {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: min(2vw, 18px);
+    font-size: min(3vw, 18px);
 }
 
 .ele-header {
     margin-top: 10px;
 
-    font-size: min(4vw, 24px);
+    font-size: min(4vw, 26px);
     font-weight: bold;
 }
 
@@ -333,7 +333,7 @@ hr {
 
 .template-header-box p {
 
-    font-size: min(3vw, 20px);
+    font-size: min(4vw, 24px);
     text-align: left;
 
     margin-left: 50px;
@@ -350,6 +350,11 @@ hr {
     object-fit: cover;
 
     filter: brightness(50%);
+}
+
+.vid-wrapper {
+    width: 900px;
+    height: 525px;
 }
 
 .container-info-box {
@@ -371,12 +376,31 @@ hr {
     align-items: center;
 }
 
+.grid-element {
+    position: relative;
+    margin: 10px;
+    width: 100%;
+    max-width: 560px;
+    min-height: 250px;
+
+    border: 4px solid #100000;
+    border-radius: 10px;
+    background-color: darkslategray;
+
+    display: grid;
+    grid-template-areas: 
+                    "a a b b"
+                    "a a b b"
+                    ". . c c"
+}
+
 .container-info {
 
+    position: relative;
     margin-right: 15px;
     margin-left: 15px;
     
-    min-width: 200px;
+    font-size: min(2vw, 20px);
     padding: 25px;
     line-height: 1.7;
     color: white;
@@ -430,7 +454,7 @@ hr {
     width: 85%;
     height: 70px;
 
-    font-size: min(2vw, 42px);
+    font-size: min(4vw, 42px);
 
     color: whitesmoke;
     background-color: #222222;
@@ -537,12 +561,103 @@ hr {
     }
 }
 
+@media (max-width: 1200px) {
+
+    .vid-wrapper {
+        width: 540px;
+        height: 315px;
+    }
+
+    .container-info-box {
+        grid-template-areas: 
+                    "a"
+                    "b"
+                    "c";
+    }
+
+    .container-info {
+
+        max-height: 600px;
+
+        padding: 18px;
+    }
+
+    .slider-wrapper {
+        max-width: 17rem;
+    }
+
+    .slideshow {
+        height: inherit;
+    }
+}
+
+@media (max-width: 690px) {
+    .slider-wrapper {
+        max-width: 13rem;
+    }
+
+    .vid-wrapper {
+        width: 270px;
+        height: 157px;
+    }
+}
+
 .hide-text {
     display: inherit;
 }
 
-@media (max-width: 600px) {
-    .hide-text {
-        display: none;
+@media (max-width: 480px) {
+    
+    .navbar-links {
+        margin-right: 15px;
+    }
+
+    .navbar-button-img img {
+        width: 24px;
+        height: 24px;
     }
 }
+
+@media (max-width: 320px) {
+    
+    .hide-text {
+        display:none;
+    }
+}
+
+.hide-banner {
+    display:inherit;
+}
+
+.replace-banner {
+    position: absolute; top: 360px; 
+}
+
+.banner-height {
+    height: 600px;
+}
+
+@media (max-width: 690px) {
+    .hide-banner {
+        display: none;
+    }
+
+    .replace-banner {
+        top: 0px;
+        bottom: 60px;
+        position: relative;
+    }
+
+    .template-header-box {
+        height: 100%;
+    }
+
+    .template-header-box p {
+        margin-right: 50px;
+    }
+
+    .banner-height {
+        height: 100%;
+    }
+}
+
