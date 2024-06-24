@@ -14,6 +14,8 @@
         <div class="navbar">
             <div class="navbar-pages">
                 <a class="navbar-button-text" href="index.html"><b><u>Home</u></b></a>
+                <a class="navbar-button-text" href="avs.html"><b>AVS</b></a>
+                <a class="navbar-button-text" href="murky.html"><b>Murky Engine</b></a>
                 <a class="navbar-button-text" href="diner.html"><b>Dungeon Diner</b></a>
                 <a class="navbar-button-text" href="down.html"><b>GET DOWN</b></a>
                 <a class="navbar-button-text" href="sheep.html"><b>Move Sheep</b></a>
@@ -45,6 +47,42 @@
                     My Online Portfolio
                 </div>
                 <div class="grid">
+                    <div class="grid-element ele-left" style="background-color: rgb(34, 34, 34); border-color: rgb(97, 97, 97);">
+                        <img src="pngs/avs/avs_logo_b.png"
+                        class="ele-image"
+                        alt="Feature Image of AVS"> 
+                        <button id="avs" class="ele-button">
+                            Read More
+                        </button>
+                        <div class="ele-desc">
+                            
+                            <div class="ele-para">
+                                Some of the work I had done at AVS
+                            </div>
+                            <div class="ele-header">
+                                Applied Virtual Simulation (AVS)
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="grid-element ele-right" style="background-color: rgb(80, 24, 29); border-color: rgb(192, 32, 32);">
+                        <img src="pngs/get_down/gd_0.png"
+                        class="ele-image"
+                        alt="Feature Image of My 3d Rendering Engine!"> 
+                        <button id="murky" class="ele-button">
+                            Read More
+                        </button>
+                        <div class="ele-desc">
+                            
+                            <div class="ele-para">
+                                An application for viewing 3D models using my custom 3D Rendering Engine
+                            </div>
+                            <div class="ele-header">
+                                Murky Engine
+                            </div>
+                            
+                        </div>
+                    </div>
                     <div class="grid-element ele-left" style="background-color: rgb(55, 59, 77); border-color: rgb(139, 120, 224);">
                         <img src="pngs/d_diner/dd_0.png"
                         class="ele-image"
@@ -132,12 +170,16 @@
                             }
                     });
         }
-                    // Get a reference to the button element
+                    // Get a reference to the button element for 'Read More' buttons
+                    const btnAV = document.getElementById("avs");
+                    const btnMK = document.getElementById("murky");
                     const btnDD = document.getElementById("diner");
                     const btnGD = document.getElementById("down");
                     const btnMS = document.getElementById("sheep");
                     const btnPP = document.getElementById("pong");
 
+                    createLinkButtonListener(btnAV, "avs.html");
+                    createLinkButtonListener(btnMK, "murky.html");
                     createLinkButtonListener(btnDD, "diner.html");
                     createLinkButtonListener(btnGD, "down.html");
                     createLinkButtonListener(btnMS, "sheep.html");
