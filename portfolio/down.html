@@ -11,19 +11,28 @@
         <div style="height: 20px"></div>
         <h1 class="header-title">JAMES WEBSTER</h1>
         <div style="height: 20px"></div>
-        <div class="navbar">
-            <div class="navbar-pages">
-                <a class="navbar-button-text" href="index.html"><b>Home</b></a>
-                <a class="navbar-button-text" href="diner.html"><b>Dungeon Diner</b></a>
-                <a class="navbar-button-text" href="down.html"><b><u>GET DOWN</u></b></a>
-                <a class="navbar-button-text" href="sheep.html"><b>Move Sheep</b></a>
-                <a class="navbar-button-text" href="pong.html"><b>Pirate Pong</b></a>
-            </div>
-            <div class="navbar-spacer">
+        <div style="display: flex; flex-direction: row; background-color: rgb(30, 30, 30);">
+            <nav>
+                <div class ="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 
+            </nav>
+            <div class="off-screen-menu">
+                <ul class="no-bullets">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="avs.html">AVS</a></li>
+                    <li><a href="murky.html">Murky</a></li>
+                    <li><a href="diner.html">Dungeon Diner</a></li>
+                    <li><a href="down.html"><u>GET DOWN</u></a></li>
+                    <li><a href="sheep.html">Move Sheep</a></li>
+                    <li><a href="pong.html">Pirate Pong</a></li>
+                </ul>
             </div>
             <div class="navbar-links hide-text">
-                <a href="https://www.linkedin.com/in/james-webster-390a9423a/"><button class="navbar-button-img">
+                <a  href="https://www.linkedin.com/in/james-webster-390a9423a/"><button class="navbar-button-img">
                     <img 
                     src="pngs/free/linked.png" 
                     alt="LinkedIn button"/>
@@ -35,6 +44,17 @@
                 </button></a>
             </div>
         </div>
+        <script>
+            const hamMenu = document.querySelector('.ham-menu');
+
+            const offScreenMenu = document.querySelector('.off-screen-menu');
+
+            hamMenu.addEventListener('click', () => {
+                hamMenu.classList.toggle('active')
+                offScreenMenu.classList.toggle('active')
+            })
+
+        </script>
         <hr>
     </header>
     
