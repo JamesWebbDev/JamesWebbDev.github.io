@@ -201,13 +201,14 @@ nav:hover {
 }
 
 .container-main {
-    background-color: magenta;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .container {
+
     background-color: rgb(20, 20, 20);
     padding: 2px;
     
@@ -369,6 +370,7 @@ nav:hover {
     background-color: magenta;
 }
 
+
 .block {
     display: flex;
     flex-direction: column;
@@ -431,6 +433,7 @@ nav:hover {
 
     width: 90%; 
     height: 360px;
+    bottom: 60px;
 }
 
 .template-header-box h1 {
@@ -467,6 +470,10 @@ nav:hover {
 .vid-wrapper {
     width: 900px;
     height: 525px;
+
+    background-color: rgb(4, 4, 4);
+    padding-top: 20px; 
+    padding-bottom: 20px;
 }
 
 .container-info-box {

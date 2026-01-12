@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START of template for project in portfolio -->
+<!DOCTYPE project [
+    <!ELEMENT project (name, description, start, end, role, skill*, technology*, banner?, backimage?, ssimage*, youtubeurl?, externallink*, colours)>
+
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT introduction (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT start (#PCDATA)>
+    <!ELEMENT end (#PCDATA)>
+    <!ELEMENT role (#PCDATA)>
+        <!-- <!ATTLIST role company (0|1|2|3|4|5) "0"> -->
+    <!ELEMENT skill (#PCDATA)>
+    <!ELEMENT technology (#PCDATA)>
+    <!ELEMENT banner (#PCDATA)>
+        <!ATTLIST banner alt CDATA #REQUIRED>
+    <!ELEMENT backimage (#PCDATA)>
+        <!ATTLIST backimage alt CDATA #REQUIRED>
+    <!ELEMENT ssimage (#PCDATA)>
+        <!ATTLIST ssimage alt CDATA #REQUIRED>
+    <!ELEMENT youtubeurl (#PCDATA)>
+    <!ELEMENT externallink (#PCDATA)>
+        <!ATTLIST externallink label CDATA #REQUIRED>
+
+    <!ELEMENT colours (primary, secondary, tertiary, surface, onsurface)>
+        <!ELEMENT primary (#PCDATA)>
+        <!ELEMENT secondary (#PCDATA)>
+        <!ELEMENT tertiary (#PCDATA)>
+        <!ELEMENT surface (#PCDATA)>
+        <!ELEMENT onsurface (#PCDATA)>
+
+
+    <!ENTITY img-path "images/">
+    <!ENTITY img-ph "images/placeholder.webp">
+    <!ENTITY no-desc "No Desc">
+
+]>
+
+<!-- Example data in template file -->
+<project>
+    <name>Default Project</name>
+    <introduction>Short description of project for front page</introduction>
+    <description>A super geenric description for the website </description>
+    <start>July 2023</start>
+    <end>July 2024</end>
+    <role>Developer</role>
+    <skill>did lots of meetings</skill>
+    <skill>learned how to perform a back-flip</skill>
+    <technology>Made plugins using c++</technology>
+    <technology>made Roblox games with Lua</technology>
+    <banner alt="meta desc of image">&img-ph;</banner>
+    <ssimage alt="meta desc of image">&img-ph;</ssimage>
+    <ssimage alt="meta desc of image">&img-ph;</ssimage>
+    <youtubeurl>https://www.youtube.com/embed/dQw4w9WgXcQ?si=uhsW-ESoxDJgEpU1</youtubeurl>
+    <colours>
+        <primary>rgb(255, 255, 0)</primary>
+        <secondary>rgb(150, 150, 0)</secondary>
+        <tertiary>rgb(54, 54, 2)</tertiary>
+        <surface>rgb(30, 30, 30)</surface>
+        <onsurface>rgb(240, 240, 240)</onsurface>
+    </colours>
+</project>

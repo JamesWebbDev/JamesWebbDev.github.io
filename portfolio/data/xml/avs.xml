@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project [
+    <!ELEMENT project (name, introduction, description, start, end, role, skill*, technology*, banner?, ssimage*, youtubeurl?, externallink*, colours)>
+
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT introduction (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT start (#PCDATA)>
+    <!ELEMENT end (#PCDATA)>
+    <!ELEMENT role (#PCDATA)>
+    <!ELEMENT skill (#PCDATA)>
+    <!ELEMENT technology (#PCDATA)>
+
+    <!ELEMENT banner (#PCDATA)>
+        <!ATTLIST banner alt CDATA #REQUIRED>
+    <!ELEMENT backimage (#PCDATA)>
+        <!ATTLIST backimage alt CDATA #REQUIRED>
+    <!ELEMENT ssimage (#PCDATA)>
+        <!ATTLIST ssimage alt CDATA #REQUIRED>
+    <!ELEMENT youtubeurl (#PCDATA)>
+    <!ELEMENT externallink (#PCDATA)>
+        <!ATTLIST externallink label CDATA #REQUIRED>
+
+    <!ELEMENT colours (primary, secondary, tertiary, surface, onsurface)>
+        <!ELEMENT primary (#PCDATA)>
+        <!ELEMENT secondary (#PCDATA)>
+        <!ELEMENT tertiary (#PCDATA)>
+        <!ELEMENT surface (#PCDATA)>
+        <!ELEMENT onsurface (#PCDATA)>
+
+
+    <!ENTITY img-path "images/avs/">
+    <!ENTITY img-ph "images/placeholder.webp">
+    <!ENTITY no-desc "No Desc">
+
+]>
+
+<project>
+    <name>Applied Virtual Simulation (AVS)</name>
+    <introduction>Some of the work I had done at AVS.</introduction>
+    <description>I acted as a Software Developer for AVS to create uniquely simulated scenarios and behaviours for clients and contractors.</description>
+    <start>July 2023</start>
+    <end>July 2024</end>
+    <role>Junior Software Developer</role>
+    <!-- Insert characters to add style when loaded from php! -->
+    <!-- ## => <strong>, #/# => </strong> -->
+    <skill>Performed ##regular Standup#/# and Retrospective meetings.</skill>
+    <skill>##Effectively recorded#/# my progress on tasks using project management tools.</skill>
+    <skill>Constructed ##presentations and demos#/# showcasing my work.</skill>
+    <skill>Regularly produced ##helpful and professional documentation#/# which assisted other developers.</skill>
+    
+    <technology>Extended applications with ##C++ plugins#/#</technology>
+    <technology>Scripted AI behaviours using ##Lua#/#</technology>
+    <technology>Managed my projects and tasks with ##Jira#/#</technology>
+    <technology>Automated testing using ##Powershell and C# #/#</technology>
+    <technology>Learnt the MAK Catalogue of Applications</technology>
+
+    <banner alt="AVS Logo">&img-path;avs_logo_b.png</banner>
+    <backimage alt="Background image of AVS simulation">&img-path;avs_0.png</backimage>
+    <ssimage alt="AVS simulation screenshot 1">&img-path;avs_0.png</ssimage>
+    <ssimage alt="AVS simulation screenshot 2">&img-path;avs_1.png</ssimage>
+    <ssimage alt="AVS simulation screenshot 3">&img-path;avs_2.png</ssimage>
+    <ssimage alt="AVS simulation screenshot 4">&img-path;avs_3.png</ssimage>
+    <youtubeurl>https://www.youtube.com/embed/1wA0wIEdD4w?si=bFgafdcZ1VvKcij0</youtubeurl>
+    <externallink label="AVS Web Page">https://www.appliedvirtual.net</externallink>
+    <colours>
+        <primary>rgb(97, 97, 97)</primary>
+        <secondary>rgb(34, 34, 34)</secondary>
+        <tertiary>rgb(22, 22, 22)</tertiary>
+        <surface>rgb(5, 5, 5)</surface>
+        <onsurface>rgb(250, 250, 250)</onsurface>
+    </colours>
+</project>
