@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- START of template for project in portfolio -->
 <!DOCTYPE project [
-    <!ELEMENT project (name, description, start, end, role, skill*, technology*, banner?, backimage?, ssimage*, youtubeurl?, externallink*, colours)>
-
+    <!ELEMENT project (name, shortname, introduction, description, start, end, role, engine?, skill*, technology*, banner?, backimage?, ssimage*, youtubeurl?, externallink*, colours)>
+        <!ATTLIST project enabled (true|false) #REQUIRED>
+    
     <!ELEMENT name (#PCDATA)>
+    <!ELEMENT shortname (#PCDATA)>
     <!ELEMENT introduction (#PCDATA)>
     <!ELEMENT description (#PCDATA)>
     <!ELEMENT start (#PCDATA)>
     <!ELEMENT end (#PCDATA)>
     <!ELEMENT role (#PCDATA)>
-        <!-- <!ATTLIST role company (0|1|2|3|4|5) "0"> -->
+    <!ELEMENT engine (#PCDATA)>
     <!ELEMENT skill (#PCDATA)>
     <!ELEMENT technology (#PCDATA)>
+
     <!ELEMENT banner (#PCDATA)>
         <!ATTLIST banner alt CDATA #REQUIRED>
     <!ELEMENT backimage (#PCDATA)>
@@ -30,15 +33,16 @@
         <!ELEMENT onsurface (#PCDATA)>
 
 
-    <!ENTITY img-path "images/">
+    <!ENTITY img-path "images/avs/">
     <!ENTITY img-ph "images/placeholder.webp">
     <!ENTITY no-desc "No Desc">
 
 ]>
 
 <!-- Example data in template file -->
-<project>
+<project enabled="false">
     <name>Default Project</name>
+    <shortname>DP</shortname>
     <introduction>Short description of project for front page</introduction>
     <description>A super geenric description for the website </description>
     <start>July 2023</start>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project [
+    <!ELEMENT project (name, shortname, introduction, description, start, end, role, engine?, skill*, technology*, banner?, backimage?, ssimage*, youtubeurl?, externallink*, colours)>
+        <!ATTLIST project enabled (true|false) #REQUIRED>
+    
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT shortname (#PCDATA)>
+    <!ELEMENT introduction (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT start (#PCDATA)>
+    <!ELEMENT end (#PCDATA)>
+    <!ELEMENT role (#PCDATA)>
+    <!ELEMENT engine (#PCDATA)>
+    <!ELEMENT skill (#PCDATA)>
+    <!ELEMENT technology (#PCDATA)>
+
+    <!ELEMENT banner (#PCDATA)>
+        <!ATTLIST banner alt CDATA #REQUIRED>
+    <!ELEMENT backimage (#PCDATA)>
+        <!ATTLIST backimage alt CDATA #REQUIRED>
+    <!ELEMENT ssimage (#PCDATA)>
+        <!ATTLIST ssimage alt CDATA #REQUIRED>
+    <!ELEMENT youtubeurl (#PCDATA)>
+    <!ELEMENT externallink (#PCDATA)>
+        <!ATTLIST externallink label CDATA #REQUIRED>
+
+    <!ELEMENT colours (primary, secondary, tertiary, surface, onsurface)>
+        <!ELEMENT primary (#PCDATA)>
+        <!ELEMENT secondary (#PCDATA)>
+        <!ELEMENT tertiary (#PCDATA)>
+        <!ELEMENT surface (#PCDATA)>
+        <!ELEMENT onsurface (#PCDATA)>
+
+
+    <!ENTITY img-path "images/diner/">
+    <!ENTITY img-ph "images/placeholder.webp">
+    <!ENTITY no-desc "No Desc">
+
+]>
+
+<project enabled="true">
+    <name>Dungeon Diner</name>
+    <shortname>Dungeon Diner</shortname>
+    <introduction>A top-down dungeon crawler where you slay monsters to serve them to your customers.</introduction>
+    <description>A top-down dungeon crawler where you hunt and slay monsters, then take their parts to create mouth-watering dishes for your customers.</description>
+    <start>August 2024</start>
+    <end>December 2024</end>
+    <role>Sole Programmer / Designer</role>
+    <engine>Unity</engine>
+
+    <!-- Insert characters to add style when loaded from php! -->
+    <!-- ## => <strong>, #/# => </strong> -->
+    <skill>A complex ##combat system#/# between players and mobs with unique ##AI#/#.</skill>
+    <skill>##Scaling prototyped#/# systems appropriately throughout development.</skill>
+    <skill>Developed ##tools#/# to help streamline production.</skill>
+    <skill>Managed and implemented user feedback from ##extensive play-testing#/#.</skill>
+
+    <technology>Built ##highly modular#/# gameplay systems using ##Scriptable Objects#/#</technology>
+    <technology>Maintained each environment's atmosphere with ##Post-processing#/#</technology>
+    <technology>Utilised ##Notion#/# pages for ##extensive project management#/# tasks</technology>
+
+    <banner alt="Dungeon Diner Title Screen">&img-path;dd_0.webp</banner>
+    <backimage alt="Dungeon Diner Title Screen">&img-path;dd_0.webp</backimage>
+    <ssimage alt="Dungeon Diner gameplay screenshot 1">&img-path;dd_3.webp</ssimage>
+    <ssimage alt="Dungeon Diner gameplay screenshot 2">&img-path;dd_5.webp</ssimage>
+    <ssimage alt="Dungeon Diner gameplay screenshot 3">&img-path;dd_6.webp</ssimage>
+    <youtubeurl>https://www.youtube.com/embed/BYOcPoArqwk?si=bsYi6_npO00kqliJ</youtubeurl>
+    <externallink label="GAMEPLAY">https://www.youtube.com/watch?v=gQ7aVKazZu8</externallink>
+    <externallink label="ITCH.IO PAGE">https://danieldestefanis.itch.io/dungeon-diner</externallink>
+    <colours>
+        <primary>rgb(139, 120, 224)</primary>
+        <secondary>rgb(45, 49, 77)</secondary>
+        <tertiary>rgb(20, 20, 52)</tertiary>
+        <surface>rgb(30, 30, 30)</surface>
+        <onsurface>rgb(240, 240, 240)</onsurface>
+    </colours>
+</project>

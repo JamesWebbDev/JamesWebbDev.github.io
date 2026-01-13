@@ -24,14 +24,55 @@
             </nav>
             <div class="off-screen-menu">
                 <ul class="no-bullets">
-                    <li><a href="http://jameswebbdev.io/index.php">Home</a></li>
-                    <li><a href="http://jameswebbdev.io/project.php?project=riad">Rome In A Day</a></li>
-                    <li><a href="http://jameswebbdev.io/project.php?project=avs"><u>AVS</u></a></li>
-                    <li><a href="http://jameswebbdev.io/project.php?project=murky">Murky</a></li>
-                    <li><a href="http://jameswebbdev.io/project.php?project=diner">Dungeon Diner</a></li>
-                    <li><a href="http://jameswebbdev.io/project.php?project=down">GET DOWN</a></li>
-                    <li><a href="http://jameswebbdev.io/project.php?project=sheep">Move Sheep</a></li>
-                    <li><a href="http://jameswebbdev.io/project.php?project=pong">Pirate Pong</a></li>
+
+                    <?php 
+
+                        $isProjectPage = isset($_GET['project']);
+
+                        if (!$isProjectPage) {
+                            echo '<li><a href="http://jameswebbdev.io/index.php"><u>Home</u></a></li>';
+                        } else {
+                            echo '<li><a href="http://jameswebbdev.io/index.php">Home</a></li>';
+                        }
+
+                        $directory = 'data/xml/*.xml'; // Get all .xml files
+
+                        // Returns an array of file paths matching the pattern
+                        $files = glob($directory);
+
+                        if ($files == false) {
+                            // No matching files found
+                            echo 'No xml files found!';
+                        } else {
+                            foreach ($files as $file) {
+
+                                $fileName = str_replace('.xml', "", basename($file));
+                                $root = simplexml_load_file($file); 
+
+                                // Returns a string of 'true' or 'false', or 'false'
+                                $isEnabled = $root['enabled'];
+                                if (empty($isEnabled)) {
+                                    echo 'Found xml ' . $fileName . ' has no "enabled" attribute! ';
+                                } elseif ($isEnabled == 'true') {
+                                    // Create a link to this xml page
+                                    
+                                    $label = $root->xpath("shortname")[0];
+                                    
+                                    if ($isProjectPage && $_GET["project"] == $fileName) {
+                                        // Underline current page's link
+                                        $label = '<u>' . $label . '</u>';
+                                    }
+
+                                    echo '<li><a href="http://jameswebbdev.io/project.php?project=' . 
+                                            $fileName . '">' . $label . '</a></li>';
+                                }
+
+                            }
+                        }
+
+                    ?>
+
+                    
                 </ul>
             </div>
             <div class="navbar-links hide-text">

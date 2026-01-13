@@ -8,7 +8,7 @@
             <div class="container" style="background-color: rgb(20, 20, 20);">
                 <h1 class="container-title">My Portfolio</h1>
             </div>
-            <div class="container">
+            <div class="container" style="background-color: rgb(5, 5, 5);">
                 <div class="vid-wrapper">
                     <iframe 
                     width="100%" 
@@ -23,148 +23,50 @@
             </div>
             <div class="container" style="background-color: rgb(20, 20, 20);">
                 <h2 class="container-title">Projects</h2>
-                <div class="grid">
-                    <div class="grid-element ele-left" style="background-color: rgb(0, 51, 52); border-color: rgb(0, 215, 143);">
-                        <img src="pngs/riad/riad_0.png"
-                        class="ele-image"
-                        alt="Feature Image of Rome In A Day"> 
-                        <button id="riad" class="ele-button">
-                            Read More
-                        </button>
-                        <div class="ele-desc">
-                            
-                            <div class="ele-para">
-                                A Tycoon game with RTS controls, built for the browser.
-                            </div>
-                            <div class="ele-header">
-                                Rome In A Day
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="grid-element ele-right" style="background-color: rgb(34, 34, 34); border-color: rgb(97, 97, 97);">
-                        <img src="pngs/avs/avs_logo_b.png" class="ele-image" alt="Feature Image of AVS"> 
-                        
-                        <div class="ele-desc">
-                            <div class="ele-para">Some of the work I had done at AVS.</div>
-                            <div class="ele-header">Applied Virtual Simulation (AVS)</div>
-                        </div>
-                    </div>';
+                <div class="grid">';
     $customlogic = function() {
 
-        $projectBlockerBuilder = function($project) {
+        $directory = 'data/xml/*.xml'; // Get all .xml files
 
-            // e.g. $project = "avs";
-            $xmlpath = "data/xml/" . $project . ".xml";
-            $root = simplexml_load_file($xmlpath); 
+        // Returns an array of file paths matching the pattern
+        $files = glob($directory);
 
-            $projectName = $root->xpath("name")[0];
-            $projectIntro = $root->xpath("introduction")[0];
-            $projectBanner = $root->xpath("banner")[0];
+        if ($files == false) {
+            // No matching files found
+            echo 'No xml files found!';
+        } else {
+            foreach ($files as $file) {
 
-            $primaryCol = $root->xpath("//primary")[0];
-            $secondaryCol = $root->xpath("//secondary")[0];
+                $fileName = trim(basename($file), '.xml');
+                $root = simplexml_load_file($file); 
 
-            echo '<div class="grid-element ele-right" style="background-color:' . 
-                $secondaryCol . '; border-color:' . $primaryCol . ';">';
-            echo '<img src=data/' . $projectBanner . ' class="ele-image" alt="' . $projectBanner["alt"] . '">';
-            echo '<button id=' . $project . ' class="ele-button">Read More</button>';
-            echo '<div class="ele-desc">';
-                echo '<div class="ele-para">' . $projectIntro . '</div>';
-                echo '<div class="ele-header">' . $projectName . '</div>';
-            echo '</div></div>';
-        };
-        
-        $projectBlockerBuilder("avs");
+                // Returns a string of 'true' or 'false', or 'false'
+                $isEnabled = $root['enabled'];
+                if (empty($isEnabled)) {
+                    echo 'Found xml ' . $fileName . ' has no "enabled" attribute! ';
+                } elseif ($isEnabled == 'true') {
+                    // Generate a summary and linked block
+                    $projectName = $root->xpath("name")[0];
+                    $projectIntro = $root->xpath("introduction")[0];
+                    $projectBanner = $root->xpath("banner")[0];
+
+                    $primaryCol = $root->xpath("//primary")[0];
+                    $secondaryCol = $root->xpath("//secondary")[0];
+
+                    echo '<div class="grid-element ele-right" style="background-color:' . 
+                        $secondaryCol . '; border-color:' . $primaryCol . ';">';
+                    echo '<img src=data/' . $projectBanner . ' class="ele-image" alt="' . $projectBanner["alt"] . '">';
+                    echo '<button id=' . $fileName . ' class="ele-button">Read More</button>';
+                    echo '<div class="ele-desc">';
+                        echo '<div class="ele-para">' . $projectIntro . '</div>';
+                        echo '<div class="ele-header">' . $projectName . '</div>';
+                    echo '</div></div>';
+                }
+
+            }
+        }
     };
     $contentsecond = '
-                    <div class="grid-element ele-left" style="background-color: rgb(80, 24, 29); border-color: rgb(192, 32, 32);">
-                        <img src="pngs/murky/murky_3.png"
-                        class="ele-image"
-                        alt="Feature Image of my 3D Rendering Engine!"> 
-                        <button id="murky" class="ele-button">
-                            Read More
-                        </button>
-                        <div class="ele-desc">
-                            
-                            <div class="ele-para">
-                                A Rendering Engine I made from scratch for applications that draw 3D models.
-                            </div>
-                            <div class="ele-header">
-                                Murky Engine
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="grid-element ele-right" style="background-color: rgb(55, 59, 77); border-color: rgb(139, 120, 224);">
-                        <img src="pngs/d_diner/dd_0.png"
-                        class="ele-image"
-                        alt="Feature Image of Dungeon Diner"> 
-                        <button id="diner" class="ele-button">
-                            Read More
-                        </button>
-                        <div class="ele-desc">
-                            
-                            <div class="ele-para">
-                                A top-down dungeon crawler where you slay monsters to serve them to your customers.
-                            </div>
-                            <div class="ele-header">
-                                Dungeon Diner
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="grid-element ele-left" style="background-color: rgb(141, 81, 0); border-color: rgb(209, 113, 50);">
-                        <img src="pngs/get_down/gd_0.png"
-                        class="ele-image"
-                        alt="Feature Image of Get Down!"> 
-                        <button id="down" class="ele-button">
-                            Read More
-                        </button>
-                        <div class="ele-desc">
-                            
-                            <div class="ele-para">
-                                A hyper-casual mobile game where you dig as far down as you can!
-                            </div>
-                            <div class="ele-header">
-                                GET DOWN!!!
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="grid-element ele-right" style="background-color: rgb(55, 63, 24); border-color: rgb(211, 255, 88);">
-                        <img src="pngs/m_sheep/ms_2.jpg"
-                        class="ele-image"
-                        alt="Feature Image of Move Sheep"> 
-                        <button id="sheep" class="ele-button">
-                            Read More
-                        </button>
-                        <div class="ele-desc">
-                            
-                            <div class="ele-para">
-                                An endless mobile game about herding lots of sheep using sheep dogs.
-                            </div>
-                            <div class="ele-header">
-                                Move Sheep!!!
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="grid-element ele-left" style="background-color: rgb(40, 75, 102); border-color: rgb(87, 183, 247);">
-                        <img src="pngs/p_pong/pp_0.png"
-                        class="ele-image"
-                        alt="Feature Image of Pirate Pong"> 
-                        <button id="pong" class="ele-button">
-                            Read More
-                        </button>
-                        <div class="ele-desc">
-                            <div class="ele-para">
-                                A local multiplayer party game with two pirates and a cannon ball.
-                            </div>
-                            <div class="ele-header">
-                                Pirate Pong
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <script>

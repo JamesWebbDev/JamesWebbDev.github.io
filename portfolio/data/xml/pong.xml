@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project [
+    <!ELEMENT project (name, shortname, introduction, description, start, end, role, engine?, skill*, technology*, banner?, backimage?, ssimage*, youtubeurl?, externallink*, colours)>
+        <!ATTLIST project enabled (true|false) #REQUIRED>
+    
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT shortname (#PCDATA)>
+    <!ELEMENT introduction (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT start (#PCDATA)>
+    <!ELEMENT end (#PCDATA)>
+    <!ELEMENT role (#PCDATA)>
+    <!ELEMENT engine (#PCDATA)>
+    <!ELEMENT skill (#PCDATA)>
+    <!ELEMENT technology (#PCDATA)>
+
+    <!ELEMENT banner (#PCDATA)>
+        <!ATTLIST banner alt CDATA #REQUIRED>
+    <!ELEMENT backimage (#PCDATA)>
+        <!ATTLIST backimage alt CDATA #REQUIRED>
+    <!ELEMENT ssimage (#PCDATA)>
+        <!ATTLIST ssimage alt CDATA #REQUIRED>
+    <!ELEMENT youtubeurl (#PCDATA)>
+    <!ELEMENT externallink (#PCDATA)>
+        <!ATTLIST externallink label CDATA #REQUIRED>
+
+    <!ELEMENT colours (primary, secondary, tertiary, surface, onsurface)>
+        <!ELEMENT primary (#PCDATA)>
+        <!ELEMENT secondary (#PCDATA)>
+        <!ELEMENT tertiary (#PCDATA)>
+        <!ELEMENT surface (#PCDATA)>
+        <!ELEMENT onsurface (#PCDATA)>
+
+
+    <!ENTITY img-path "images/pong/">
+    <!ENTITY img-ph "images/placeholder.webp">
+    <!ENTITY no-desc "No Desc">
+
+]>
+
+<project enabled="true">
+    <name>Pirate Pong</name>
+    <shortname>Pirate Pong</shortname>
+    <introduction>A local multiplayer party game with two pirates and a cannon ball.</introduction>
+    <description>Play against a friend in this two player party game where a couple of pirates attempt to punt cannon balls into each other's goals.</description>
+    <start>October 2021</start>
+    <end>December 2021</end>
+    <role>Sole Programmer / Designer</role>
+    <engine>Unity</engine>
+
+    <!-- Insert characters to add style when loaded from php! -->
+    <!-- ## => <strong>, #/# => </strong> -->
+    <skill>Developed ##team management and coordination#/# between artists and designers</skill>
+    <skill>Effectively utilised source control to keep our project stable ##mobile devices#/#</skill>
+    <skill>Handled local multiplayer compatability across differing input devices</skill>
+
+    <technology>Assisting team members with ##source control#/# powered by ##Github#/#</technology>
+    <technology>Practiced ##extensive project management#/# skills utilising ##Trello#/#</technology>
+    <technology>Seamlessly integrated Unity's ##Shader Graphs#/# into the environment</technology>
+
+    <banner alt="Pirate Pong Main Menu">&img-path;pp_0.webp</banner>
+    <backimage alt="Pirate Pong gameplay screenshot">&img-path;pp_2.webp</backimage>
+    <ssimage alt="Pirate Pong screenshot 1">&img-path;pp_1.webp</ssimage>
+    <ssimage alt="Pirate Pong screenshot 1">&img-path;pp_3.webp</ssimage>
+    <ssimage alt="Pirate Pong screenshot 1">&img-path;pp_4.webp</ssimage>
+    <youtubeurl>https://www.youtube.com/embed/eqo4lKP3j9g?si=LMCZiqwh1Y6m-sgP</youtubeurl>
+    <externallink label="WEEK 2 GAMEPLAY">https://www.youtube.com/watch?v=zLH8Kkxs4QY</externallink>
+    <externallink label="WEEK 4 GAMEPLAY">https://www.youtube.com/watch?v=cx91evfMUyc</externallink>
+    <externallink label="WEEK 6 GAMEPLAY">https://www.youtube.com/watch?v=eqo4lKP3j9g</externallink>
+    <colours>
+        <primary>rgb(87, 183, 247)</primary>
+        <secondary>rgb(40, 75, 102)</secondary>
+        <tertiary>rgb(12, 12, 26)</tertiary>
+        <surface>rgb(30, 30, 30)</surface>
+        <onsurface>rgb(240, 240, 240)</onsurface>
+    </colours>
+</project>

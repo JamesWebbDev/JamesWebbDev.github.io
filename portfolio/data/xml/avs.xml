@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE project [
-    <!ELEMENT project (name, introduction, description, start, end, role, skill*, technology*, banner?, ssimage*, youtubeurl?, externallink*, colours)>
-
+    <!ELEMENT project (name, shortname, introduction, description, start, end, role, engine?, skill*, technology*, banner?, backimage?, ssimage*, youtubeurl?, externallink*, colours)>
+        <!ATTLIST project enabled (true|false) #REQUIRED>
+    
     <!ELEMENT name (#PCDATA)>
+    <!ELEMENT shortname (#PCDATA)>
     <!ELEMENT introduction (#PCDATA)>
     <!ELEMENT description (#PCDATA)>
     <!ELEMENT start (#PCDATA)>
     <!ELEMENT end (#PCDATA)>
     <!ELEMENT role (#PCDATA)>
+    <!ELEMENT engine (#PCDATA)>
     <!ELEMENT skill (#PCDATA)>
     <!ELEMENT technology (#PCDATA)>
 
@@ -35,13 +38,15 @@
 
 ]>
 
-<project>
+<project enabled="true">
     <name>Applied Virtual Simulation (AVS)</name>
+    <shortname>AVS</shortname>
     <introduction>Some of the work I had done at AVS.</introduction>
     <description>I acted as a Software Developer for AVS to create uniquely simulated scenarios and behaviours for clients and contractors.</description>
     <start>July 2023</start>
     <end>July 2024</end>
     <role>Junior Software Developer</role>
+    
     <!-- Insert characters to add style when loaded from php! -->
     <!-- ## => <strong>, #/# => </strong> -->
     <skill>Performed ##regular Standup#/# and Retrospective meetings.</skill>
@@ -55,12 +60,12 @@
     <technology>Automated testing using ##Powershell and C# #/#</technology>
     <technology>Learnt the MAK Catalogue of Applications</technology>
 
-    <banner alt="AVS Logo">&img-path;avs_logo_b.png</banner>
-    <backimage alt="Background image of AVS simulation">&img-path;avs_0.png</backimage>
-    <ssimage alt="AVS simulation screenshot 1">&img-path;avs_0.png</ssimage>
-    <ssimage alt="AVS simulation screenshot 2">&img-path;avs_1.png</ssimage>
-    <ssimage alt="AVS simulation screenshot 3">&img-path;avs_2.png</ssimage>
-    <ssimage alt="AVS simulation screenshot 4">&img-path;avs_3.png</ssimage>
+    <banner alt="AVS Logo">&img-path;avs_logo_b.webp</banner>
+    <backimage alt="Background image of AVS simulation">&img-path;avs_0.webp</backimage>
+    <ssimage alt="AVS simulation screenshot 1">&img-path;avs_0.webp</ssimage>
+    <ssimage alt="AVS simulation screenshot 2">&img-path;avs_1.webp</ssimage>
+    <ssimage alt="AVS simulation screenshot 3">&img-path;avs_2.webp</ssimage>
+    <ssimage alt="AVS simulation screenshot 4">&img-path;avs_3.webp</ssimage>
     <youtubeurl>https://www.youtube.com/embed/1wA0wIEdD4w?si=bFgafdcZ1VvKcij0</youtubeurl>
     <externallink label="AVS Web Page">https://www.appliedvirtual.net</externallink>
     <colours>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project [
+    <!ELEMENT project (name, shortname, introduction, description, start, end, role, engine?, skill*, technology*, banner?, backimage?, ssimage*, youtubeurl?, externallink*, colours)>
+        <!ATTLIST project enabled (true|false) #REQUIRED>
+    
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT shortname (#PCDATA)>
+    <!ELEMENT introduction (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT start (#PCDATA)>
+    <!ELEMENT end (#PCDATA)>
+    <!ELEMENT role (#PCDATA)>
+    <!ELEMENT engine (#PCDATA)>
+    <!ELEMENT skill (#PCDATA)>
+    <!ELEMENT technology (#PCDATA)>
+
+    <!ELEMENT banner (#PCDATA)>
+        <!ATTLIST banner alt CDATA #REQUIRED>
+    <!ELEMENT backimage (#PCDATA)>
+        <!ATTLIST backimage alt CDATA #REQUIRED>
+    <!ELEMENT ssimage (#PCDATA)>
+        <!ATTLIST ssimage alt CDATA #REQUIRED>
+    <!ELEMENT youtubeurl (#PCDATA)>
+    <!ELEMENT externallink (#PCDATA)>
+        <!ATTLIST externallink label CDATA #REQUIRED>
+
+    <!ELEMENT colours (primary, secondary, tertiary, surface, onsurface)>
+        <!ELEMENT primary (#PCDATA)>
+        <!ELEMENT secondary (#PCDATA)>
+        <!ELEMENT tertiary (#PCDATA)>
+        <!ELEMENT surface (#PCDATA)>
+        <!ELEMENT onsurface (#PCDATA)>
+
+
+    <!ENTITY img-path "images/sheep/">
+    <!ENTITY img-ph "images/placeholder.webp">
+    <!ENTITY no-desc "No Desc">
+
+]>
+
+<project enabled="true">
+    <name>Move Sheep!!!</name>
+    <shortname>Move Sheep</shortname>
+    <introduction>An endless mobile game about herding lots of sheep using sheep dogs.</introduction>
+    <description>A small, charming mobile game where you control sheep dogs to herd a load of sheep through small gates to progress.</description>
+    <start>April 2022</start>
+    <end>June 2022</end>
+    <role>Sole Developer</role>
+    <engine>Unity</engine>
+
+    <!-- Insert characters to add style when loaded from php! -->
+    <!-- ## => <strong>, #/# => </strong> -->
+    <skill>Understanding the ##render pipeline#/# to create ##HLSL / GLSL#/# shaders</skill>
+    <skill>Developing games for ##mobile#/# devices</skill>
+    <skill>Creating dynamic AI using ##Boids / Flocking#/# behaviour</skill>
+
+    <banner alt="Move Sheep Title Screen">&img-path;ms_6.webp</banner>
+    <backimage alt="Dungeon Diner Title Screen">&img-path;ms_6.webp</backimage>
+    <ssimage alt="Dungeon Diner gameplay screenshot 1">&img-path;ms_0.webp</ssimage>
+    <ssimage alt="Dungeon Diner gameplay screenshot 2">&img-path;ms_3.webp</ssimage>
+    <ssimage alt="Dungeon Diner gameplay screenshot 3">&img-path;ms_5.webp</ssimage>
+    <youtubeurl>https://www.youtube.com/embed/-K9mkBRXW0k?si=teW6UTOtx7dyUBNE</youtubeurl>
+    <externallink label="BETA GAMEPLAY">https://www.youtube.com/watch?v=QTAXHUuCmiw</externallink>
+    <!-- <externallink label="GOOGLE PLAY STORE">https://play.google.com/store/apps/details?id=com.LastStrawGames.MOVESHEEPAlpha</externallink> --> 
+    <colours>
+        <primary>rgb(211, 255, 88)</primary>
+        <secondary>rgb(55, 63, 24)</secondary>
+        <tertiary>rgb(20, 30, 5)</tertiary>
+        <surface>rgb(30, 30, 30)</surface>
+        <onsurface>rgb(240, 240, 240)</onsurface>
+    </colours>
+</project>

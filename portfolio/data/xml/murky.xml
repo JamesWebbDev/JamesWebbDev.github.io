@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project [
+    <!ELEMENT project (name, shortname, introduction, description, start, end, role, engine?, skill*, technology*, banner?, backimage?, ssimage*, youtubeurl?, externallink*, colours)>
+        <!ATTLIST project enabled (true|false) #REQUIRED>
+    
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT shortname (#PCDATA)>
+    <!ELEMENT introduction (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT start (#PCDATA)>
+    <!ELEMENT end (#PCDATA)>
+    <!ELEMENT role (#PCDATA)>
+    <!ELEMENT engine (#PCDATA)>
+    <!ELEMENT skill (#PCDATA)>
+    <!ELEMENT technology (#PCDATA)>
+
+    <!ELEMENT banner (#PCDATA)>
+        <!ATTLIST banner alt CDATA #REQUIRED>
+    <!ELEMENT backimage (#PCDATA)>
+        <!ATTLIST backimage alt CDATA #REQUIRED>
+    <!ELEMENT ssimage (#PCDATA)>
+        <!ATTLIST ssimage alt CDATA #REQUIRED>
+    <!ELEMENT youtubeurl (#PCDATA)>
+    <!ELEMENT externallink (#PCDATA)>
+        <!ATTLIST externallink label CDATA #REQUIRED>
+
+    <!ELEMENT colours (primary, secondary, tertiary, surface, onsurface)>
+        <!ELEMENT primary (#PCDATA)>
+        <!ELEMENT secondary (#PCDATA)>
+        <!ELEMENT tertiary (#PCDATA)>
+        <!ELEMENT surface (#PCDATA)>
+        <!ELEMENT onsurface (#PCDATA)>
+
+
+    <!ENTITY img-path "images/murky/">
+    <!ENTITY img-ph "images/placeholder.webp">
+    <!ENTITY no-desc "No Desc">
+
+]>
+
+<project enabled="true">
+    <name>Murky Engine</name>
+    <shortname>Murky</shortname>
+    <introduction>A Rendering Engine I made that draws 3D models.</introduction>
+    <description>A Rendering Engine I made from scratch for applications that draw 3D models.</description>
+    <start>December 2023</start>
+    <end>March 2024</end>
+    <role>Sole Developer</role>
+    <engine>None</engine>
+
+    <!-- Insert characters to add style when loaded from php! -->
+    <!-- ## => <strong>, #/# => </strong> -->
+    <skill>Gained a greater understanding of ##vector math.#/#</skill>
+    <skill>Writing ##custom shaders#/# for desired results.</skill>
+    <skill>##Extracting and parsing#/# data from ##model files.#/#</skill>
+    <skill>Using ##C++ Macros#/# to enhance productivity.</skill>
+    <skill>##Modularly linking#/# 3rd party tools into the engine.</skill>
+
+    <technology>##Scalable#/# codebase using ##only C++#/#</technology>
+    <technology>Flexible ##project building#/# using ##Premake#/#</technology>
+    <technology>##Powerful 3D#/# Rendering with ##OpenGL#/#</technology>
+    <technology>##Dynamic#/# and ##Interactive#/# UI with ##ImGui#/#</technology>
+
+    <banner alt="Murky Engine model rendered">&img-path;murky_0.webp</banner>
+    <backimage alt="Murky engine codebase screenshot">&img-path;murky_1.webp</backimage>
+    <ssimage alt="Murky Engine screenshot 1">&img-path;murky_3.webp</ssimage>
+    <ssimage alt="Murky Engine screenshot 2">&img-path;murky_2.webp</ssimage>
+    <ssimage alt="Murky Engine screenshot 2">&img-path;murky_4.webp</ssimage>
+    <youtubeurl>https://www.youtube.com/embed/vc0rgRQ4jHo?si=c5ppwveqtH3FvJJo</youtubeurl>
+    <externallink label="GITHUB PAGE">https://github.com/JamesWebbDev/Murky</externallink>
+    <colours>
+        <primary>rgb(192, 32, 32)</primary>
+        <secondary>rgb(80, 24, 29)</secondary>
+        <tertiary>rgb(54, 2, 2)</tertiary>
+        <surface>rgb(30, 30, 30)</surface>
+        <onsurface>rgb(240, 240, 240)</onsurface>
+    </colours>
+</project>

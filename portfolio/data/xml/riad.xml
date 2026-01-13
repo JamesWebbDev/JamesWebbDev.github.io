@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project [
+    <!ELEMENT project (name, shortname, introduction, description, start, end, role, engine?, skill*, technology*, banner?, backimage?, ssimage*, youtubeurl?, externallink*, colours)>
+        <!ATTLIST project enabled (true|false) #REQUIRED>
+    
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT shortname (#PCDATA)>
+    <!ELEMENT introduction (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT start (#PCDATA)>
+    <!ELEMENT end (#PCDATA)>
+    <!ELEMENT role (#PCDATA)>
+    <!ELEMENT engine (#PCDATA)>
+    <!ELEMENT skill (#PCDATA)>
+    <!ELEMENT technology (#PCDATA)>
+
+    <!ELEMENT banner (#PCDATA)>
+        <!ATTLIST banner alt CDATA #REQUIRED>
+    <!ELEMENT backimage (#PCDATA)>
+        <!ATTLIST backimage alt CDATA #REQUIRED>
+    <!ELEMENT ssimage (#PCDATA)>
+        <!ATTLIST ssimage alt CDATA #REQUIRED>
+    <!ELEMENT youtubeurl (#PCDATA)>
+    <!ELEMENT externallink (#PCDATA)>
+        <!ATTLIST externallink label CDATA #REQUIRED>
+
+    <!ELEMENT colours (primary, secondary, tertiary, surface, onsurface)>
+        <!ELEMENT primary (#PCDATA)>
+        <!ELEMENT secondary (#PCDATA)>
+        <!ELEMENT tertiary (#PCDATA)>
+        <!ELEMENT surface (#PCDATA)>
+        <!ELEMENT onsurface (#PCDATA)>
+
+
+    <!ENTITY img-path "images/riad/">
+    <!ENTITY img-ph "images/placeholder.webp">
+    <!ENTITY no-desc "No Desc">
+
+]>
+
+<project enabled="true">
+    <name>Rome In A Day</name>
+    <shortname>Rome In A Day</shortname>
+    <introduction>A Tycoon game with RTS controls, built for the browser.</introduction>
+    <description>A Tycoon game where you build increasingly complex towns and cities, built for the browser.</description>
+    <start>November 2024</start>
+    <end>On going</end>
+    <role>Sole Developer</role>
+    <engine>Unity</engine>
+
+    <!-- Insert characters to add style when loaded from php! -->
+    <!-- ## => <strong>, #/# => </strong> -->
+    <skill>##Improved knowledge#/# and modularity of ##Shader Graphs#/#.</skill>
+    <skill>Learnt the ##differences and advantages#/# for ##WebGL#/# builds.</skill>
+    <skill>Created ##robust and scalable#/# gameplay systems, ##streamlining#/# development.</skill>
+
+    <technology>Building for ##WebGL projects#/# and games</technology>
+    <technology>##Integrating and hosting#/# WebGL builds on ##Github#/#</technology>
+    
+    <banner alt="Title Screen of Rome In A Day">&img-path;riad_0.webp</banner>
+    <backimage alt="Title Screen of Rome In A Day">&img-path;riad_0.webp</backimage>
+    <ssimage alt="Rome In A Day screenshot 1">&img-path;riad_0.webp</ssimage>
+    <!-- <youtubeurl>https://www.youtube.com/embed/1wA0wIEdD4w?si=bFgafdcZ1VvKcij0</youtubeurl> --> 
+    <externallink label="PLAY IT NOW">https://jameswebbdev.github.io/Rome_In_A_Day_Play</externallink>
+    <colours>
+        <primary>rgb(0, 215, 143)</primary>
+        <secondary>rgb(0, 51, 52)</secondary>
+        <tertiary>rgb(2, 20, 30)</tertiary>
+        <surface>rgb(30, 30, 30)</surface>
+        <onsurface>rgb(240, 240, 240)</onsurface>
+    </colours>
+</project>

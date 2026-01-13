@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project [
+    <!ELEMENT project (name, shortname, introduction, description, start, end, role, engine?, skill*, technology*, banner?, backimage?, ssimage*, youtubeurl?, externallink*, colours)>
+        <!ATTLIST project enabled (true|false) #REQUIRED>
+    
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT shortname (#PCDATA)>
+    <!ELEMENT introduction (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT start (#PCDATA)>
+    <!ELEMENT end (#PCDATA)>
+    <!ELEMENT role (#PCDATA)>
+    <!ELEMENT engine (#PCDATA)>
+    <!ELEMENT skill (#PCDATA)>
+    <!ELEMENT technology (#PCDATA)>
+
+    <!ELEMENT banner (#PCDATA)>
+        <!ATTLIST banner alt CDATA #REQUIRED>
+    <!ELEMENT backimage (#PCDATA)>
+        <!ATTLIST backimage alt CDATA #REQUIRED>
+    <!ELEMENT ssimage (#PCDATA)>
+        <!ATTLIST ssimage alt CDATA #REQUIRED>
+    <!ELEMENT youtubeurl (#PCDATA)>
+    <!ELEMENT externallink (#PCDATA)>
+        <!ATTLIST externallink label CDATA #REQUIRED>
+
+    <!ELEMENT colours (primary, secondary, tertiary, surface, onsurface)>
+        <!ELEMENT primary (#PCDATA)>
+        <!ELEMENT secondary (#PCDATA)>
+        <!ELEMENT tertiary (#PCDATA)>
+        <!ELEMENT surface (#PCDATA)>
+        <!ELEMENT onsurface (#PCDATA)>
+
+
+    <!ENTITY img-path "images/down/">
+    <!ENTITY img-ph "images/placeholder.webp">
+    <!ENTITY no-desc "No Desc">
+
+]>
+
+<project enabled="true">
+    <name>GET DOWN!!!</name>
+    <shortname>GET DOWN</shortname>
+    <introduction>A hyper-casual mobile game where you dig as far down as you can!</introduction>
+    <description>A hyper-casual mobile game where you dig as far down as you can for gold and glory!</description>
+    <start>May 2023</start>
+    <end>June 2023</end>
+    <role>Sole Develeoper</role>
+    <engine>Unity</engine>
+
+    <!-- Insert characters to add style when loaded from php! -->
+    <!-- ## => <strong>, #/# => </strong> -->
+    <skill>##Backend feature#/# implementation (user authentication, ##cloud save data#/#).</skill>
+    <skill>Pixel art and development.</skill>
+    <skill>Publishing a title onto the ##Google Play Store#/#.</skill>
+
+    <banner alt="GET DOWN Title screen">&img-path;gd_0.webp</banner>
+    <backimage alt="GET DOWN Title wallpaper">&img-path;gd_3.webp</backimage>
+    <ssimage alt="Get Down screenshot 1">&img-path;gd_2.webp</ssimage>
+    <ssimage alt="Get Down screenshot 2">&img-path;gd_1.webp</ssimage>
+    <youtubeurl>https://www.youtube.com/embed/IlOAwYijXAY?si=nUMxMl_d4UHU_BT6</youtubeurl>
+    <externallink label="GAMEPLAY">https://www.youtube.com/watch?v=IlOAwYijXAY</externallink>
+    <externallink label="GOOGLE PLAY">https://play.google.com/store/apps/details?id=com.velcogames.getdown</externallink>
+    <colours>
+        <primary>rgb(209, 113, 50)</primary>
+        <secondary>rgb(100, 51, 0)</secondary>
+        <tertiary>rgb(50, 20, 0)</tertiary>
+        <surface>rgb(30, 30, 30)</surface>
+        <onsurface>rgb(240, 240, 240)</onsurface>
+    </colours>
+</project>
