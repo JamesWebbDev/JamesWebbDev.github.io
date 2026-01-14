@@ -78,12 +78,12 @@
             <div class="navbar-links hide-text">
                 <a  href="https://www.linkedin.com/in/james-webster-390a9423a/"><button class="navbar-button-img">
                     <img 
-                    src="pngs/free/linked.png" 
+                    src=<?php echo $datafolder . '/images/free/in.webp' ?>
                     alt="LinkedIn button"/>
                 </button></a>
                 <a href="https://github.com/JamesWebbDev"><button class="navbar-button-img">
                     <img 
-                    src="pngs/free/github.png" 
+                    src=<?php echo $datafolder . '/images/free/github.webp' ?>
                     alt="Github button"/>
                 </button></a>
             </div>

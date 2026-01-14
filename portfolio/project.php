@@ -9,7 +9,7 @@
     $content = '
 
     ';
-    $secondcontent = '';
+    $contentsecond = '';
 ?>
 
 

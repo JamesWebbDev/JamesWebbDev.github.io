@@ -41,7 +41,7 @@
 <project enabled="true">
     <name>Move Sheep!!!</name>
     <shortname>Move Sheep</shortname>
-    <introduction>An endless mobile game about herding lots of sheep using sheep dogs.</introduction>
+    <introduction>An endless mobile game about herding sheep.</introduction>
     <description>A small, charming mobile game where you control sheep dogs to herd a load of sheep through small gates to progress.</description>
     <start>April 2022</start>
     <end>June 2022</end>

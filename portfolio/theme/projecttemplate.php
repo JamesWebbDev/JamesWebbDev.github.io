@@ -111,7 +111,8 @@
             echo '</ul></div>';
 
             /* Information B, Technologies used and Button Links */
-            echo '<div class="container-info" style="grid-area: b; border-color:' . $primaryCol . ';">';
+            echo '<div class="container-info" style="grid-area: b; border-color:' . $primaryCol . 
+                    '; ">';
 
                 if (!empty($technologiesList)) {
                     echo '<big>Learnt Technologies:</big><ul>';
@@ -120,12 +121,13 @@
                     }
                     echo '</ul>';
                 }
+            echo '<div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">';
                 foreach($externalLinksList as $link) {
                     echo '<button class="btn-info" style="border-color:' . $primaryCol . ';">
-                            <a class="link-gameplay" href=' . $link . '>' . $link["label"] . '
+                            <a class="btn-info-text" href=' . $link . '>' . $link["label"] . '
                             </a></button>';
                 }
-            echo '</div>';
+            echo '</div></div>';
 
             /* Information C, Slideshow of project images */
             echo '<section class="container-info slideshow" style="grid-area: c; border-color:' . $primaryCol . ';">';

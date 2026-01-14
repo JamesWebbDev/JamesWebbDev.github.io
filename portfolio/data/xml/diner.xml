@@ -41,7 +41,7 @@
 <project enabled="true">
     <name>Dungeon Diner</name>
     <shortname>Dungeon Diner</shortname>
-    <introduction>A top-down dungeon crawler where you slay monsters to serve them to your customers.</introduction>
+    <introduction>A dungeon crawler serving monsters to customers.</introduction>
     <description>A top-down dungeon crawler where you hunt and slay monsters, then take their parts to create mouth-watering dishes for your customers.</description>
     <start>August 2024</start>
     <end>December 2024</end>

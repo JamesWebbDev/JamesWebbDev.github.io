@@ -35,9 +35,13 @@
             // No matching files found
             echo 'No xml files found!';
         } else {
+
+            /* For organising elements in grid on front page (left|right) */
+            $elementFlexDirection = 'left';
+
             foreach ($files as $file) {
 
-                $fileName = trim(basename($file), '.xml');
+                $fileName = str_replace('.xml', "", basename($file));
                 $root = simplexml_load_file($file); 
 
                 // Returns a string of 'true' or 'false', or 'false'
@@ -53,22 +57,26 @@
                     $primaryCol = $root->xpath("//primary")[0];
                     $secondaryCol = $root->xpath("//secondary")[0];
 
-                    echo '<div class="grid-element ele-right" style="background-color:' . 
+                    echo '<div class="grid-element ele-' . $elementFlexDirection . '" style="background-color:' . 
                         $secondaryCol . '; border-color:' . $primaryCol . ';">';
                     echo '<img src=data/' . $projectBanner . ' class="ele-image" alt="' . $projectBanner["alt"] . '">';
                     echo '<button id=' . $fileName . ' class="ele-button">Read More</button>';
                     echo '<div class="ele-desc">';
-                        echo '<div class="ele-para">' . $projectIntro . '</div>';
-                        echo '<div class="ele-header">' . $projectName . '</div>';
+                        echo '<p class="ele-para">' . $projectIntro . '</p>';
+                        echo '<h2 class="ele-header">' . $projectName . '</h2>';
                     echo '</div></div>';
+
+                    if ($elementFlexDirection == 'left') {
+                        $elementFlexDirection = 'right';
+                    } else {
+                        $elementFlexDirection = 'left';
+                    }
                 }
 
             }
-        }
-    };
-    $contentsecond = '
-                    </div>
-                </div>
+
+            /* JAVASCRIPT for Buttons in above elements */
+            echo '</div></div>
                 <script>
                     function createLinkButtonListener(pageButton, htmlString) {
                         pageButton.addEventListener("mouseup", function (event) {
@@ -83,8 +91,8 @@
                             } else {
                                 window.location.href = htmlString;
                             }
-                    });
-        }
+                        });
+                    }
                     // Get a reference to the button element for Read More buttons
                     const btnRD = document.getElementById("riad");
                     const btnAV = document.getElementById("avs");
@@ -103,54 +111,34 @@
                     createLinkButtonListener(btnPP, "http://jameswebbdev.io/project.php?project=pong");
                         
                 </script>
-            </div>
-            <div class="container" style="background-color: rgb(20, 30, 30);">
+            </div>';
+        }
+
+        echo '<div class="container" style="background-color: rgb(20, 30, 30);">
                 <h2 class="container-title" style="font-size: min(10vw, 50px);">GET IN TOUCH</h2>
                 <p class="container-title-sub">I\'d love to hear from you</p>
-                <div class="container-blocks">
-                    <div class="block" style="background-color: whitesmoke">
+                <div class="container-blocks">';
+        
+        $blockGenerator = function($gridArea, $imageURI, $imageDescription, $colour, $textColour) {
+            echo '<div class="block" style="background-color: ' . $colour . '; grid-area='.$gridArea.'">
                         <div class="block-container">
-                            <img src="pngs/free/mail.png"
-                            class="block-img"
-
-                            alt="Mail image"> 
+                            <img src=data/images/free/' . $imageURI . ' class="block-img"> 
                         </div>
                         <div class="block-container block-txt" 
-                            style="color:rgb(70, 70, 70);
-                            font-size: 19px;">
-                            jameswebsterdevportfolio@gmail.com
-                        </div>
-                    </div>
-                    <div 
-                    class="block" 
-                    style="background-color: rgb(233, 47, 47);">
-                        <div class="block-container">
-                            <img src="pngs/free/phone.png"
-                            class="block-img"
-
-                            alt="Phone image"> 
-                        </div>
-                        <div class="block-container block-txt">
-                            61+ 490 845 381
-                        </div>
-                    </div>
-                    <div class="block" style="background-color: rgb(54, 131, 179)">
-                        <div class="block-container">
-                            <img src="pngs/free/in.png"
-                            class="block-img"
-                            
-                            alt="LinkedIn logo "> 
-                        </div>
-                        <div class="block-container block-txt" 
-                            style="font-size: 22px;">
-                            Find me on LinkedIn
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            style="color:' . $textColour . ';">' 
+                            . $imageDescription . '</div>
+                  </div>';
             
-        </div>
-    ';
+        };
+
+        $blockGenerator('a', 'mail.webp', 'jameswebsterdevportfolio@gmail.com', 'rgb(250, 250, 250)', 'rgb(70, 70, 70)');
+        $blockGenerator('b', 'phone.webp', '61+ 490 845 381', 'rgb(233, 47, 47)', 'white');
+        $blockGenerator('c', 'in.webp', 'Find me on LinkedIn', 'rgb(54, 131, 179)', 'white');
+        $blockGenerator('d', 'github.webp', 'Github.com/JamesWebbDev', 'rgb(37, 41, 46)', 'white');
+
+        echo '</div></div></div>';
+    };
+    $contentsecond = '';
 ?>
 
 

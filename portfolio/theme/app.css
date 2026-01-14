@@ -274,12 +274,11 @@ nav:hover {
     width: 75%;
     height: 60%;
     object-fit: cover;
-    margin-right: 40px;
 
     justify-self: center;
     align-self: center;
 
-    font-size: min(4vw, 30px);
+    font-size: 1.45em;
     font-weight: bold;
 
     background-color: rgb(185, 255, 81);
@@ -290,9 +289,9 @@ nav:hover {
 
     cursor: pointer;
 
-    transition: background-color 0.2s, 
-                color 0.2s, 
-                border-color 0.2s,
+    transition: background-color 0.15s, 
+                color 0.15s, 
+                border-color 0.15s,
                 border-width 0.1s;
 }
 
@@ -327,13 +326,16 @@ nav:hover {
 
 .ele-para {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: min(3vw, 22px);
+    font-size: min(4vw, 1.8em);
+    margin-block: 0em;
+    margin-bottom: 1em;
 }
 
 .ele-header {
     margin-top: 4px;
 
-    font-size: min(3.5vw, 26px);
+    font-size: min(5vw, 2.2em);
+    margin-block: 0em;
     font-weight: bold;
 }
 
@@ -361,13 +363,16 @@ nav:hover {
 
 .container-blocks {
 
-    display: flex;
-    flex-direction: row;
-
-    justify-content: center;
     margin-bottom: 50px;
 
     background-color: magenta;
+
+    
+
+    display: grid;
+    grid-template-areas: 
+                    "a b"
+                    "c d"
 }
 
 
@@ -376,45 +381,38 @@ nav:hover {
     flex-direction: column;
     justify-content: center;
 
-    height: 300px;
+    width: min(300px, 30vw);
 }
 
 .block-container {
 
+    display: flex;
     justify-content: center;
-    align-items: center;
     
-    height: 100%;
-    display:flex;
+    padding: 6px;
+
 }
 
 .block-img {
 
-    display: block;
-
-    padding: 20px;
-
-    width: 150px;
-    height: 150px;
+    width: min(150px, 75%);
 }
 
 .block-txt {
     align-items: start;
 
-    width: 80%;
-    height: 75px;
 
     margin-left: 10px;
     margin-right: 10px;
 
     color: white;
-    font-size: 19px;
     font-style: italic;
     font-kerning: none;
     font-weight: lighter;
     font-family: "fonts/Nanum/NanumGothicCoding-Regular";
 
-    inline-size: 270px;
+    font-size: min(4vw, 20px);
+
     overflow-wrap: break-word;
     word-break: break-all;
 }
@@ -481,12 +479,12 @@ nav:hover {
     margin: 0px;
 
     grid-template-areas: 
-                    "a a . ."
-                    "a a b b"
-                    "a a b b"
-                    ". . b b"
-                    "c c c c"
-                    "c c c c";
+                    "a a a ."
+                    "a a a ."
+                    ". b b b"
+                    ". b b b"
+                    "c c c ."
+                    "c c c .";
 
     grid-template-columns: 1fr; /* 1 column */
     gap: 20px;
@@ -495,23 +493,6 @@ nav:hover {
     align-items: center;
 }
 
-.grid-element {
-    position: relative;
-    margin: 10px;
-    width: 100%;
-    max-width: 560px;
-    min-height: 250px;
-
-    border: 4px solid #100000;
-    border-radius: 10px;
-    background-color: darkslategray;
-
-    display: grid;
-    grid-template-areas: 
-                    "a a b b"
-                    "a a b b"
-                    ". . c c"
-}
 
 .container-info {
 
@@ -519,7 +500,7 @@ nav:hover {
     margin-right: 15px;
     margin-left: 15px;
     
-    font-size: min(2vw, 20px);
+    font-size: min(3vw, 1em);
     padding: 25px;
     line-height: 1.7;
     color: white;
@@ -538,14 +519,6 @@ nav:hover {
     text-align:start;
     
 }
-
-.link-gameplay {
-
-    color: white;
-    text-decoration: none;
-}
-
-
 
 .flex-column {
     display: flex;
@@ -579,15 +552,12 @@ nav:hover {
 
 .btn-info {
 
-    margin: 10px;
-    width: 85%;
-    height: 70px;
+    margin-top: 10px;
+    padding: 8px;
+    width: 18em;
 
-    font-size: min(4vw, 42px);
-
-    color: whitesmoke;
     background-color: #222222;
-    border: 6px solid green;
+    border: 6px solid;
 
     cursor: pointer;
 
@@ -599,13 +569,18 @@ nav:hover {
 }
 
 .btn-info:hover {
+    
+    width: 20em;
+}
+
+.btn-info-text {
+
+    text-decoration: none;
 
     color: white;
-    background-color: rgb(10, 10, 10);
-    border-color: rgb(185, 255, 81);
-
-    width: 90%;
-    height: 80px;
+    font-weight: bold;
+    font-size: min(4vw, 1.5em);
+    margin-top: 120px;
 }
 
 .slideshow {
@@ -699,9 +674,9 @@ nav:hover {
 
     .container-info-box {
         grid-template-areas: 
-                    "a"
-                    "b"
-                    "c";
+                    ". a ."
+                    ". b ."
+                    ". c .";
     }
 
     .container-info {
@@ -744,6 +719,19 @@ nav:hover {
     .navbar-button-img img {
         width: 24px;
         height: 24px;
+    }
+
+    .grid-element {
+        grid-template-areas: 
+                    "a b b b"
+                    "a b b b"
+                    "c c c c"
+    }
+
+    .btn-info:hover {
+    
+        
+        width: 16em;
     }
 }
 
