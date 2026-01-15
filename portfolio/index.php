@@ -1,5 +1,6 @@
 <?php
 	$title = 'Home';
+    $dns = 'jameswebdev.info';
 	$datafolder = 'data'; // Data folder, pointed to from root
 	$themefolder = 'theme'; // Theme folder, pointed to from root
     $embedstyle = '';
@@ -75,6 +76,8 @@
 
             }
 
+            $dns = 'jameswebdev.info';
+
             /* JAVASCRIPT for Buttons in above elements */
             echo '</div></div>
                 <script>
@@ -102,13 +105,13 @@
                     const btnMS = document.getElementById("sheep");
                     const btnPP = document.getElementById("pong");
 
-                    createLinkButtonListener(btnRD, "http://jameswebbdev.io/project.php?project=riad")
-                    createLinkButtonListener(btnAV, "http://jameswebbdev.io/project.php?project=avs");
-                    createLinkButtonListener(btnMK, "http://jameswebbdev.io/project.php?project=murky");
-                    createLinkButtonListener(btnDD, "http://jameswebbdev.io/project.php?project=diner");
-                    createLinkButtonListener(btnGD, "http://jameswebbdev.io/project.php?project=down");
-                    createLinkButtonListener(btnMS, "http://jameswebbdev.io/project.php?project=sheep");
-                    createLinkButtonListener(btnPP, "http://jameswebbdev.io/project.php?project=pong");
+                    createLinkButtonListener(btnRD, "http://'.$dns.'/project.php?project=riad")
+                    createLinkButtonListener(btnAV, "http://'.$dns.'/project.php?project=avs");
+                    createLinkButtonListener(btnMK, "http://'.$dns.'/project.php?project=murky");
+                    createLinkButtonListener(btnDD, "http://'.$dns.'/project.php?project=diner");
+                    createLinkButtonListener(btnGD, "http://'.$dns.'/project.php?project=down");
+                    createLinkButtonListener(btnMS, "http://'.$dns.'/project.php?project=sheep");
+                    createLinkButtonListener(btnPP, "http://'.$dns.'/project.php?project=pong");
                         
                 </script>
             </div>';

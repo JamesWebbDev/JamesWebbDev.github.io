@@ -30,9 +30,9 @@
                         $isProjectPage = isset($_GET['project']);
 
                         if (!$isProjectPage) {
-                            echo '<li><a href="http://jameswebbdev.io/index.php"><u>Home</u></a></li>';
+                            echo '<li><a href="http://'.$dns.'/index.php"><u>Home</u></a></li>';
                         } else {
-                            echo '<li><a href="http://jameswebbdev.io/index.php">Home</a></li>';
+                            echo '<li><a href="http://'.$dns.'/index.php">Home</a></li>';
                         }
 
                         $directory = 'data/xml/*.xml'; // Get all .xml files
@@ -63,7 +63,7 @@
                                         $label = '<u>' . $label . '</u>';
                                     }
 
-                                    echo '<li><a href="http://jameswebbdev.io/project.php?project=' . 
+                                    echo '<li><a href="http://'.$dns.'/project.php?project=' . 
                                             $fileName . '">' . $label . '</a></li>';
                                 }
 
