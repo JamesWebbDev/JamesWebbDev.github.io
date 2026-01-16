@@ -134,8 +134,8 @@
             
         };
 
-        $blockGenerator('a', 'mail.webp', 'jameswebsterdevportfolio@gmail.com', 'rgb(250, 250, 250)', 'rgb(70, 70, 70)');
-        $blockGenerator('b', 'phone.webp', '61+ 490 845 381', 'rgb(233, 47, 47)', 'white');
+        $blockGenerator('a', 'mail.webp', 'tejrbfcu@jameswebdev.info', 'rgb(250, 250, 250)', 'rgb(70, 70, 70)');
+        $blockGenerator('b', 'phone.webp', 'Give me a Call', 'rgb(233, 47, 47)', 'white');
         $blockGenerator('c', 'in.webp', 'Find me on LinkedIn', 'rgb(54, 131, 179)', 'white');
         $blockGenerator('d', 'github.webp', 'Github.com/JamesWebbDev', 'rgb(37, 41, 46)', 'white');
 

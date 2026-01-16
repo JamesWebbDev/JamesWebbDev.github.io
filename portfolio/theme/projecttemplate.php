@@ -123,9 +123,13 @@
                 }
             echo '<div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">';
                 foreach($externalLinksList as $link) {
-                    echo '<button class="btn-info" style="border-color:' . $primaryCol . ';">
-                            <a class="btn-info-text" href=' . $link . '>' . $link["label"] . '
-                            </a></button>';
+
+                    /*  'target=_blank': forces <a> to open into a new tab 
+                        'rel="noopener noreferrer"': prevents new tab from modifying the original tab maliciously
+                    */
+                    echo '<a href=' . $link . ' target="_blank" rel="noopener noreferrer">' . 
+                            '<button class="btn-info" style="border-color:' . $primaryCol . ';">'.$link["label"].'</button>'.
+                            '</a>';
                 }
             echo '</div></div>';
 

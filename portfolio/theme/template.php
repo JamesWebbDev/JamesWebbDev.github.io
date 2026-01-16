@@ -114,6 +114,6 @@
     </main>
 
     <footer>
-        <p class="footer-block">&copy; 2026 by James Webster.</p>
+        <p class="footer-block">&copy; 2026 James Webster. All Rights Reserved.</p>
     </footer>
 </body>

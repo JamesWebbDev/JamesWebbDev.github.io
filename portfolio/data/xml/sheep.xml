@@ -38,7 +38,7 @@
 
 ]>
 
-<project enabled="true">
+<project enabled="false">
     <name>Move Sheep!!!</name>
     <shortname>Move Sheep</shortname>
     <introduction>An endless mobile game about herding sheep.</introduction>

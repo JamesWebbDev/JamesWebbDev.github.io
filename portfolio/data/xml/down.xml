@@ -38,7 +38,7 @@
 
 ]>
 
-<project enabled="true">
+<project enabled="false">
     <name>GET DOWN!!!</name>
     <shortname>GET DOWN</shortname>
     <introduction>A hyper-casual mobile game where you dig as far down as you can!</introduction>

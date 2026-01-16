@@ -554,7 +554,7 @@ nav:hover {
 
     margin-top: 10px;
     padding: 8px;
-    width: 18em;
+    width: 10em;
 
     background-color: #222222;
     border: 6px solid;
@@ -566,22 +566,19 @@ nav:hover {
                 border-color 0.2s,
                 width 0.1s,
                 height 0.1s;
+
+    text-decoration: none;
+    
+    color: lightgray;
+    font-weight: bold;
+    font-size: min(4vw, 1.5em);
 }
 
 .btn-info:hover {
-    
-    width: 20em;
-}
-
-.btn-info-text {
-
-    text-decoration: none;
-
+    width: 11em;
     color: white;
-    font-weight: bold;
-    font-size: min(4vw, 1.5em);
-    margin-top: 120px;
 }
+
 
 .slideshow {
     position: relative;
@@ -731,7 +728,7 @@ nav:hover {
     .btn-info:hover {
     
         
-        width: 16em;
+        width: 9em;
     }
 }
 
