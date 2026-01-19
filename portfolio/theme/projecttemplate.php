@@ -18,7 +18,7 @@
         $start = $root->xpath("start")[0];
         $end = $root->xpath("end")[0];
         $role = $root->xpath("role")[0];
-        $engine = $root->xpath("engine")[0];
+        $engine = $root->xpath("engine");
         $skillsList = $root->xpath("skill");
         $technologiesList = $root->xpath("technology");
 
@@ -102,7 +102,7 @@
                     End Date: <strong>' . $end . '</strong><br>
                     Role: <strong>' . $role . '</strong><br>';
 
-            if (!empty($engine)) { echo 'Engine: <strong>'. $engine .'</strong><br>'; }
+            if (!empty($engine)) { echo 'Engine: <strong>'. $engine[0] .'</strong><br>'; }
 
             echo    '<br><big>Learnt skills:</big><ul>';
                 foreach($newSkillsList as $skill) {

@@ -13,27 +13,33 @@
         <div style="height: 20px"></div>
         <h1 class="header-title">JAMES WEBSTER</h1>
         <div style="height: 20px"></div>
-        <div style="display: flex; flex-direction: row; background-color: rgb(30, 30, 30);">
-            <nav>
-                <div class ="ham-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+        <nav>
+            
+            <div class ="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
                 
-            </nav>
             <div class="off-screen-menu">
                 <ul class="no-bullets">
 
                     <?php 
 
-                        $isProjectPage = isset($_GET['project']);
+                        /* ECHOs a link for the heading bar */
+                        $linkGenerator = function($dns, $page, $label, $colour, $bColour) {
 
-                        if (!$isProjectPage) {
-                            echo '<li><a href="http://'.$dns.'/index.php"><u>Home</u></a></li>';
-                        } else {
-                            echo '<li><a href="http://'.$dns.'/index.php">Home</a></li>';
-                        }
+                            $button = '<button style="border-color:'.$colour.
+                                        '; background-color:'.$bColour.';">'.$label.'</button>';
+                            $target = '"http://'.$dns.'/'.$page.'"';
+
+                            echo '<li><a href='.$target.'>'.$button.'</a></li>';
+                        };
+
+                        $isProjectPage = isset($_GET['project']);
+                        $homeLabel = $isProjectPage ? 'Home' : '<b><u>Home</u></b>';
+
+                        $linkGenerator($dns, 'index.php', $homeLabel, 'rgb(150, 150, 200)', 'rgb(30, 30, 40)');
 
                         $directory = 'data/xml/*.xml'; // Get all .xml files
 
@@ -57,14 +63,20 @@
                                     // Create a link to this xml page
                                     
                                     $label = $root->xpath("shortname")[0];
+
+                                    $primaryCol = $root->xpath("//primary")[0];
+                                    $secondaryCol = $root->xpath("//secondary")[0];
+                                    $tertiaryCol = $root->xpath("//tertiary")[0];
+                                    $surfaceCol = $root->xpath("//surface")[0];
+                                    $onSurfaceCol = $root->xpath("//onsurface")[0];
                                     
                                     if ($isProjectPage && $_GET["project"] == $fileName) {
                                         // Underline current page's link
-                                        $label = '<u>' . $label . '</u>';
+                                        $label = '<b><u>' . $label . '</u></b>';
                                     }
 
-                                    echo '<li><a href="http://'.$dns.'/project.php?project=' . 
-                                            $fileName . '">' . $label . '</a></li>';
+                                    $projecturl = 'project.php?project='.$fileName;
+                                    $linkGenerator($dns, $projecturl, $label, $primaryCol, $tertiaryCol);
                                 }
 
                             }
@@ -87,7 +99,7 @@
                     alt="Github button"/>
                 </button></a>
             </div>
-        </div>
+        </nav>
         <script>
             const hamMenu = document.querySelector('.ham-menu');
 
